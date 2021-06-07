@@ -1,5 +1,3 @@
-
-
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -36,6 +34,7 @@ public class UseRegis extends JFrame {
     private JTextField country;
     private JPasswordField passwordField;
     private JButton btnNewButton;
+    private JButton loginButton;
 
     /**
      * Launch the application.
@@ -204,7 +203,21 @@ public class UseRegis extends JFrame {
             }
         });
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
-        btnNewButton.setBounds(399, 477, 259, 74);
+        btnNewButton.setBounds(599, 477, 259, 74);
         contentPane.add(btnNewButton);
+
+        loginButton = new JButton("Login");
+        loginButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                UserLogin ul = new UserLogin();
+                ul.setTitle("Welcome");
+                ul.setVisible(true);
+            }
+        });
+        loginButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
+        loginButton.setBounds(299, 477, 259, 74);
+        contentPane.add(loginButton);
     }
 }
