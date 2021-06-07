@@ -3,12 +3,15 @@ use finalPj;
 
 CREATE TABLE category
 (
-	accountId INT PRIMARY KEY,
-	accountName VARCHAR(25),
-	accountPT VARCHAR(50),
-	accountDOB VARCHAR(25),
-	accountCountry VARCHAR(25),
-	accountGender VARCHAR(25)
+	AccountId INT PRIMARY KEY,
+        First_name VARCHAR(25),
+   	Last_name VARCHAR(25),
+	AccountName VARCHAR(25),
+	AccountPT VARCHAR(50),
+	AccountDOB VARCHAR(25),
+	AccountCountry VARCHAR(25),
+	Password varchar(250),
+    	MobileNumber varchar(250)
 );
 Alter table category Add password varchar(250);
 Alter table category Add mobile_number varchar(250) after password;
